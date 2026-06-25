@@ -1,0 +1,153 @@
+============================================================
+              DIAMOND BRIGHT CYBERGUARD™
+             Executive Cyber Risk Summary
+============================================================
+
+Prepared For:
+Diamond
+
+Prepared By:
+Joshua Bottoms
+Diamond Bright LLC
+
+Assessment Date:
+June 25, 2026
+
+Assessment ID:
+DB-20260625-174258
+
+------------------------------------------------------------
+                    CYBERGUARD SCORE
+------------------------------------------------------------
+
+Overall CyberGuard Score:
+97/100
+
+Overall Rating:
+A
+
+Estimated Risk Level:
+LOW
+
+Recommended Protection Plan:
+CyberGuard Essential
+
+Potential One-Day Business Impact:
+Not Calculated
+
+------------------------------------------------------------
+                    EXECUTIVE SUMMARY
+------------------------------------------------------------
+
+Diamond Bright LLC completed a CyberGuard Business Cyber Risk
+Assessment to help identify technology risks, operational concerns,
+and practical improvements for your business.
+
+Based on the assessment results, your environment currently shows an
+overall rating of A with an estimated risk level of LOW.
+
+The goal of this report is to explain the results in plain business
+terms so ownership can clearly understand what is working well, what
+needs attention, and what should be prioritized next.
+
+------------------------------------------------------------
+                    WHAT IS WORKING WELL
+------------------------------------------------------------
+
+- Core system storage appears healthy.
+- No failed critical services were detected during the assessment.
+- Firewall protection is active.
+- Internet connectivity was verified.
+- Wi-Fi encryption appears acceptable.
+- Device inventory was successfully completed.
+
+------------------------------------------------------------
+                    KEY AREAS TO REVIEW
+------------------------------------------------------------
+
+1. Multi-Factor Authentication
+
+Business accounts should use Multi-Factor Authentication whenever
+possible. MFA helps protect email, cloud software, financial accounts,
+and administrative systems if a password is ever stolen.
+
+2. Backup Verification
+
+Backups should not only exist — they should be tested. A restore test
+confirms the business can recover from hardware failure, ransomware,
+or accidental data loss.
+
+3. Router and Firewall Review
+
+Network equipment should be reviewed regularly to confirm firmware,
+firewall settings, and wireless security remain properly configured.
+
+4. Smart and IoT Devices
+
+Printers, TVs, cameras, garage devices, and other connected equipment
+should be reviewed because they often remain on networks for years
+without updates or security checks.
+
+------------------------------------------------------------
+                    BUSINESS IMPACT
+------------------------------------------------------------
+
+Technology downtime can affect employee productivity, customer
+service, payment processing, communications, and daily revenue.
+
+Estimated One-Day Business Impact:
+Not Calculated
+
+CyberGuard monthly protection is designed to reduce the chance of
+avoidable technology issues becoming costly interruptions.
+
+------------------------------------------------------------
+                    PRIORITY ACTION PLAN
+------------------------------------------------------------
+
+Priority 1:
+Enable Multi-Factor Authentication on important business accounts.
+
+Priority 2:
+Verify that backups can be restored successfully.
+
+Priority 3:
+Review router, firewall, and Wi-Fi configuration.
+
+Priority 4:
+Review connected devices and remove anything unknown or unnecessary.
+
+Priority 5:
+Schedule recurring CyberGuard assessments to track risk over time.
+
+------------------------------------------------------------
+                    DIAMOND BRIGHT RECOMMENDATION
+------------------------------------------------------------
+
+Recommended Plan:
+CyberGuard Essential
+
+Diamond Bright recommends ongoing CyberGuard protection to help
+monitor technology health, track changes, review security posture,
+and provide business owners with clear monthly visibility into their
+technology risk.
+
+------------------------------------------------------------
+                    NEXT STEPS
+------------------------------------------------------------
+
+1. Review this report with Diamond Bright LLC.
+2. Decide which priority items should be addressed first.
+3. Consider a monthly CyberGuard protection plan.
+4. Schedule the next assessment or follow-up review.
+
+------------------------------------------------------------
+
+Diamond Bright LLC
+Diamond Bright CyberGuard™
+Website: flawlessgemai.com
+Email: ceo@diamondbrightai.com
+
+Know Your Risks. Protect Your Business.
+
+============================================================

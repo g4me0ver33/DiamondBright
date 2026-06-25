@@ -31,8 +31,13 @@ read -p "MFA Enabled For Business Accounts? (Y/N): " MFA
 read -p "Internet Required Daily For Operations? (Y/N): " INTERNET
 
 echo
-read -p "Network range to scan? Example 192.168.1.0/24: " NETRANGE
+NETRANGE="${CYBERGUARD_NETWORK_RANGE:-}"
 
+if [ -z "$NETRANGE" ]; then
+    read -p "Network range to scan? Example 192.168.1.0/24: " NETRANGE
+else
+    echo "Network range detected automatically: $NETRANGE"
+fi
 DATE=$(date +"%Y-%m-%d_%H-%M")
 ASSESSMENT_ID="DB-$(date +%Y%m%d)-$(date +%H%M%S)"
 REPORT="DiamondBright_${ASSESSMENT_ID}_${CLIENT// /_}.txt"
