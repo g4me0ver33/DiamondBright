@@ -1,71 +1,39 @@
-#!/bin/bash
-
-TECH_REPORT="$1"
-
-if [ -z "$TECH_REPORT" ]; then
-    echo "Usage: ./build_executive_report.sh technical_report.txt"
-    exit 1
-fi
-
-CLIENT=$(grep -m1 "^Client:" "$TECH_REPORT" | cut -d: -f2- | xargs)
-ASSESSMENT_ID=$(grep -m1 "Assessment ID:" "$TECH_REPORT" | awk '{print $NF}')
-SCORE=$(grep -m1 "Overall Technical Score:" "$TECH_REPORT" | grep -oE '[0-9]+/100')
-RATING=$(grep -m1 "Overall Rating:" "$TECH_REPORT" | awk '{print $NF}')
-RISK=$(grep -m1 "Estimated Risk Level:" "$TECH_REPORT" | cut -d: -f2- | xargs)
-PLAN=$(grep -m1 "Recommended Protection Plan:" "$TECH_REPORT" | cut -d: -f2- | xargs)
-IMPACT=$(grep "Potential One-Day Business Impact:" "$TECH_REPORT" | tail -n1 | cut -d: -f2- | xargs)
-DATE_NOW=$(date "+%B %d, %Y")
-
-[ -z "$CLIENT" ] && CLIENT="Client"
-[ -z "$ASSESSMENT_ID" ] && ASSESSMENT_ID="CG-$(date +%Y%m%d-%H%M%S)"
-[ -z "$SCORE" ] && SCORE="Not Available"
-[ -z "$RATING" ] && RATING="Not Available"
-[ -z "$RISK" ] && RISK="Review Recommended"
-[ -z "$PLAN" ] && PLAN="CyberGuard Essential"
-[ -z "$IMPACT" ] && IMPACT="Not Calculated"
-
-SAFE_CLIENT=$(echo "$CLIENT" | tr ' ' '_' | tr -cd '[:alnum:]_-')
-CLIENT_DIR="clients/${SAFE_CLIENT}/${ASSESSMENT_ID}"
-mkdir -p "$CLIENT_DIR"
-
-EXEC_REPORT="$CLIENT_DIR/CyberGuard_Executive_Report_${ASSESSMENT_ID}_${SAFE_CLIENT}.txt"
-cat > "$EXEC_REPORT" <<EOF
 ============================================================
               DIAMOND BRIGHT CYBERGUARD™
              Executive Cyber Risk Summary
 ============================================================
 
 Prepared For:
-$CLIENT
+Diamond
 
 Prepared By:
 Joshua Bottoms
 Diamond Bright LLC
 
 Assessment Date:
-$DATE_NOW
+June 25, 2026
 
 Assessment ID:
-$ASSESSMENT_ID
+DB-20260625-174258
 
 ------------------------------------------------------------
                     CYBERGUARD SCORE
 ------------------------------------------------------------
 
 Overall CyberGuard Score:
-$SCORE
+97/100
 
 Overall Rating:
-$RATING
+A
 
 Estimated Risk Level:
-$RISK
+LOW
 
 Recommended Protection Plan:
-$PLAN
+CyberGuard Essential
 
 Potential One-Day Business Impact:
-$IMPACT
+Not Calculated
 
 ------------------------------------------------------------
                     EXECUTIVE SUMMARY
@@ -76,7 +44,7 @@ Assessment to help identify technology risks, operational concerns,
 and practical improvements for your business.
 
 Based on the assessment results, your environment currently shows an
-overall rating of $RATING with an estimated risk level of $RISK.
+overall rating of A with an estimated risk level of LOW.
 
 The goal of this report is to explain the results in plain business
 terms so ownership can clearly understand what is working well, what
@@ -128,7 +96,7 @@ Technology downtime can affect employee productivity, customer
 service, payment processing, communications, and daily revenue.
 
 Estimated One-Day Business Impact:
-$IMPACT
+Not Calculated
 
 CyberGuard monthly protection is designed to reduce the chance of
 avoidable technology issues becoming costly interruptions.
@@ -157,7 +125,7 @@ Schedule recurring CyberGuard assessments to track risk over time.
 ------------------------------------------------------------
 
 Recommended Plan:
-$PLAN
+CyberGuard Essential
 
 Diamond Bright recommends ongoing CyberGuard protection to help
 monitor technology health, track changes, review security posture,
@@ -183,7 +151,3 @@ Email: ceo@diamondbrightai.com
 Know Your Risks. Protect Your Business.
 
 ============================================================
-EOF
-
-echo "Executive report created:"
-echo "$EXEC_REPORT"
