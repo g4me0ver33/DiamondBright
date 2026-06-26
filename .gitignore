@@ -1,0 +1,23 @@
+# ===== Generated Reports =====
+DiamondBright_DB-*.txt
+*.log
+
+# ===== Client Reports =====
+clients/
+
+# ===== PDF Output =====
+*.pdf
+
+# ===== Local Backups =====
+Backups/
+
+# ===== Test Reports =====
+test_reports/
+
+# ===== Python Cache =====
+__pycache__/
+*.pyc
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
