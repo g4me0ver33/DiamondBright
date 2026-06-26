@@ -13,7 +13,7 @@ SCORE=$(grep -m1 "Overall Technical Score:" "$TECH_REPORT" | grep -oE '[0-9]+/10
 RATING=$(grep -m1 "Overall Rating:" "$TECH_REPORT" | awk '{print $NF}')
 RISK=$(grep -m1 "Estimated Risk Level:" "$TECH_REPORT" | cut -d: -f2- | xargs)
 PLAN=$(grep -m1 "Recommended Protection Plan:" "$TECH_REPORT" | cut -d: -f2- | xargs)
-IMPACT=$(grep -m1 "Potential One-Day Business Impact:" "$TECH_REPORT" | cut -d: -f2- | xargs)
+IMPACT=$(grep "Potential One-Day Business Impact:" "$TECH_REPORT" | tail -n1 | cut -d: -f2- | xargs)
 DATE_NOW=$(date "+%B %d, %Y")
 
 [ -z "$CLIENT" ] && CLIENT="Client"
