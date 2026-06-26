@@ -11,6 +11,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
 from reportlab.lib.units import inch
+from reportlab.platypus import Image
 
 
 def grab(text, label, default="Not Available"):
@@ -110,6 +111,11 @@ def main():
     )
 
     story = []
+    logo_path = Path("assets/cyberguard_logo.png")
+    if logo_path.exists():
+        logo = Image(str(logo_path), width=6.5 * inch, height=3.65 * inch)
+        story.append(logo)
+        story.append(Spacer(1, 0.2 * inch))
 
     story.append(Paragraph("DIAMOND BRIGHT CYBERGUARD™", title))
     story.append(Paragraph("Executive Business Cyber Risk Assessment", subtitle))

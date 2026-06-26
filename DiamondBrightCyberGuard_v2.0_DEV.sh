@@ -38,6 +38,25 @@ echo
 
 CYBERGUARD_NETWORK_RANGE="$NETWORK_RANGE" bash ./diamondbrighttest.sh
 
+LATEST_REPORT=$(ls -t DiamondBright_DB-*.txt 2>/dev/null | head -n1)
+
+if [ -n "$LATEST_REPORT" ]; then
+    echo
+    echo "Generating CyberGuard Executive Report..."
+    LATEST_EXEC=$(./build_executive_report.sh "$LATEST_REPORT" | tail -n1)
+
+    if [ -n "$LATEST_EXEC" ] && [ -f "$LATEST_EXEC" ]; then
+        echo "Executive report created:"
+        echo "$LATEST_EXEC"
+        echo
+        echo "Generating Professional PDF..."
+        python3 build_professional_pdf.py "$LATEST_EXEC"
+    else
+        echo "Executive report file was not found. PDF was not generated."
+    fi
+else
+    echo "No technical report found. Executive report was not generated."
+fi
 END_TIME=$(date +%s)
 DURATION=$((END_TIME - START_TIME))
 MINUTES=$((DURATION / 60))

@@ -185,5 +185,4 @@ Know Your Risks. Protect Your Business.
 ============================================================
 EOF
 
-echo "Executive report created:"
 echo "$EXEC_REPORT"
